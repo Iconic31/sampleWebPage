@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+:root{
+    --primary-color : tomato;
+}
+
+/* start arrow up */
+
+.arrowUp{
+    background-color: tomato;
+
+    padding:15px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    z-index: 100;
+    cursor: pointer;
+
+    display: none;
+}
+
+
+/* end arrow up */
+
+/* start modal */
+
+.modals{
+    background-color: rgba(0,0,0,.9);
+    color: #fff;
+
+    margin-top: 130px;
+}
+
+.btnX{
+   background-color: #fff;
+}
+
+.modalInputs:focus{
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.btnCancles, .btnSubmits{
+    border: 1px solid #fff;
+    color: #fff;
+    margin: 0 5px;
+}
+
+.btnCancles:hover{
+    background-color: #aaa;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.btnSubmits:hover{
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.locks{
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/* end modal */
+
+header{
+
+    background:url("../img/bg/restaurantbg1.jpg");
+    background-size: cover;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* start navbar */
+
+.navbars{
+    background: linear-gradient(
+        220deg,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1)
+    );
+
+    padding: 30px 0;
+
+    transition: all .5s;
+}
+
+.line1, .line2 , .line3{
+    width: 30px;
+    height: 3px;
+    background-color:#fff;
+
+    margin: 5px 0;
+
+    transition: all .5s;
+}
+
+.crossXs .line1{
+    transform: rotate(45deg) translate(5px,6px);
+}
+
+.crossXs .line2{
+    opacity: 0;
+}
+
+.crossXs .line3{
+    transform: rotate(-45deg) translate(5px,-6px);
+}
+
+.btnBooks{
+    background-color: var(--primary-color);
+    color: #fff;
+
+    border: none;
+}
+
+.btnBooks:hover, .btnBooks:focus{
+    background-color: rgb(219, 88, 65);
+    color:#fff;
+}
+
+.hovers{
+    color:#fff;
+    letter-spacing: 1px;
+}
+
+.hovers:hover{
+    color: var(--primary-color);
+}
+
+@media (max-width:1000px){
+    .btnBooks{
+        display: none;
+    }
+
+    .btnModels{
+        display: block;
+    }
+}
+
+/* end navbar */
+
+/* start banner */
+
+.banners{
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation: introAni 3s;
+}
+
+.welcomes{
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+
+    color: var(--primary-color);
+}
+
+p.tos{
+    width: 30px;
+    height: 3px ;
+    background-color: var(--primary-color);
+
+    margin-top: 10px;
+}
+
+.intros{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    color: #fff;
+    font-size: 55px;
+    letter-spacing: 2px;
+    animation: introAni 2s 1s backwards;
+}
+
+@keyframes introAni{
+    0%{
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0%);
+        opacity: 1;
+    }
+}
+
+
+/* end banner */
+
+/* start about  */
+
+.abouts{
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.7)
+    ),url("../img/bg/restaurantbg1.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    position: relative;
+}
+
+.aboutText{
+    color: var(--primary-color);
+    background-color: #fff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+
+    padding: 15px ;
+    border-left: 5px solid var(--primary-color);
+}
+
+.staffgirl{
+    position: absolute;
+    bottom: 0;
+
+    margin-left: 100px;
+}
+
+.staffAni{
+    animation: staffAni 3s;
+}
+
+.aboutAni{
+    animation: aboutAni 3s;
+}
+
+
+@keyframes staffAni{
+    0%{
+        transform: translate(-150px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes aboutAni{
+    0%{
+        transform: translate(150px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+/* end about */
+
+/* start menu */
+
+.menus{
+    background: linear-gradient(
+        320deg,
+        rgb(69, 20, 20) 20%,
+        rgb(42, 11, 11) 40%,
+        rgba(0,0,0,1) 80%
+    );
+}
+
+.titles{
+    color: #fff;
+    cursor: pointer;
+}
+
+.menuTitles{
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+
+    letter-spacing: 2px;
+    text-align: center;
+
+    width: 60%;
+    padding: 10px;
+    background:linear-gradient(
+        rgba(0,0,0,.5),
+        rgba(0,0,0,.8)
+    );
+
+
+    color: #fff;
+}
+
+.cardBoxs{
+    overflow: hidden;
+
+    white-space: pre-wrap;
+}
+
+.cardBoxs::before{
+    content: "We make delicous foods for you \A Reasonable price & good services  \A \f004  \f004  \f004 ";
+
+    font-family: sans-serif,"font awesome 6 free";
+    
+    font-size: 14px;
+
+    text-align: center;
+    line-height: 1.8;
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-color:rgba(0,0,0,.5) ;
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+    opacity: 0;
+
+    transition: all .5s;
+}
+
+.cardImgs{
+    transition: all .5s;
+}
+
+.cardBoxs:hover .cardImgs{
+    transform: scale(1.2);
+}
+
+.cardBoxs:hover::before{
+    opacity: 1;
+}
+
+.menuLists{
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+.activeItems{
+    color: var(--primary-color);
+}
+
+.card{
+    width: 300px;
+    height: 200px;
+}
+
+.cardImgs{
+    width: 100%;
+    height: calc(100% + 20px);
+}
+
+.slider{
+    width: 58px;
+    height: 5px;
+    background-color: var(--primary-color);
+}
+
+
+.menuContainer{
+    display: flex;
+    justify-content: center;
+}
+/* end menu */
+
+/* start cheif section */
+
+.cheifCards{
+    width: 250px;
+
+    /* background-color: rgba(0,0,0,.5); */
+    color: #fff;
+    background-color:  rgb(69, 20, 20);
+    border-radius:10px ;
+
+    margin-left: 100px;
+
+    box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+}
+
+.cheifs{
+    width: 250px;
+
+    border-bottom-right-radius:150px ;
+    border-bottom-left-radius:10px ;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.cheifCardsAni{
+    animation: cheifCardsAni 3s; 
+}
+
+.cheifTextAni{
+    animation: cheifTextAni 3s;
+}
+
+.cheifTextAniDe1{
+    animation: cheifTextAni 3s 1s backwards;
+}
+
+.cheifTextAniDe2{
+    animation: cheifTextAni 3s 2s backwards;
+}
+
+
+@keyframes cheifCardsAni{
+    from{
+        transform: translate(-200px);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes cheifTextAni{
+    0%{
+        transform: translate(200px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+/* end cheif section */
+
+/* start customer section */
+
+.customers{
+    background:linear-gradient(
+        20deg,
+        rgba(0,0,0,.6),
+        transparent
+    ) ,url("../img/bg/bg2.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.users{
+    border-radius: 50%;
+}
+
+/* end customer section */
+
+/* start blog */
+
+.blogs{
+    background: linear-gradient(
+        320deg,
+        rgb(69, 20, 20) 20%,
+        rgb(42, 11, 11) 40%,
+        rgba(0,0,0,1) 80%
+    );
+}
+
+.blogContainer{
+    width: 300px;
+    background-color: transparent;
+    color: #fff;
+
+    padding: 20px;
+
+    transition: all .5s;
+}
+
+.blogImg{
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+.getDate{
+    color:rgb(146, 48, 48) ;
+}
+
+.readBtn{
+    background-color:rgb(81, 22, 22) ;
+    color: #fff;
+
+    border: none;
+    border-radius: 0;
+    padding: 5px 20px;
+}
+
+.readBtn:hover{
+    background-color:rgb(49, 13, 13) ;
+    color: #fff;
+}
+
+.blogContainer:hover{
+   
+    background:linear-gradient(
+        0deg,
+        var(--primary-color),
+        rgb(49, 13, 13)
+     
+    );
+
+    transform: scale(1.1);
+}
+
+.blogContainer:hover .getDate{
+    color: #fff;
+}
+
+/* end blog */
+
+/* start contact */
+
+.contacts{
+    background:linear-gradient(
+        100deg,
+        rgba(0,0,0,.9) 50%,
+        transparent 50%
+    ) ,url("../img/bg/bg2.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.form-group{    
+    margin: 30px 0;
+    color: #fff;
+}
+
+
+input.form-control{
+    background: none;
+
+    border: none;
+    border-bottom : 1px solid #fff;
+    border-radius: 0;
+
+}
+
+
+input.form-control:focus{
+    background:transparent;
+    box-shadow: none;
+}
+
+.labels{
+    color: #e2e2e2;
+    display: block;
+    margin-left: 10px;
+    margin-top: -60px;
+
+    transition: all .5s;
+}
+
+.form-control:placeholder-shown + .labels{
+    opacity: 0;
+    transform: translateY(33px);
+}
+
+.subBtn{
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+
+    margin: 10px 0;
+    border: none;
+}
+
+.subBtn:hover{
+    background-color: rgb(172, 51, 29);
+    color: #fff;
+}
+
+/* end contact */
+
+/* start footer */
+
+.footerLinks{
+    text-decoration: none;
+    color: #fff;
+
+    display: inline-block;
+    margin-bottom: 5px;
+
+    transition: all .2s;
+}
+
+.footerLinks:hover{
+    color:var(--primary-color);
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.footers{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dividers{
+    display: none;
+}
+
+@media(max-width:800px){
+    .dividers{
+        display: block;
+    }
+}
+
+/* end footer */
